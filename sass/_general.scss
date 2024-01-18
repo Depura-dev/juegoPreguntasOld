@@ -1,0 +1,51 @@
+*{
+    transition:all ease-in-out 0.2s ;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+
+body {
+    font-family: $letrageneral;
+    background-color: $colorFondo;
+    
+}
+
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.contenedor{
+    max-width: max-content;
+    max-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 1em;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+}

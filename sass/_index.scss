@@ -1,0 +1,244 @@
+#seccionLogin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $colorLogin;
+  animation-duration: 1s;
+  animation-name: entrar-arriba;
+
+  .contenedorAlias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .contenedor {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+
+  #ingrNombre {
+    color: $colorletra;
+    font-family: $letrageneral;
+    font-size: 22px;
+    width: 100%;
+  }
+
+
+  #alias {
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
+.tituloJuego {
+  width: 100%;
+  @include imageBg('../../img/logo-colfondos.png', rem(100px), 100%);
+}
+
+.botones{
+  font-weight: bold;
+  align-items: center;
+  background: $colorBotones;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color:white;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: center;
+  mix-blend-mode: normal;
+  padding: 16px;
+  width: 150px;
+}
+
+
+.opciones {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+#opciones-contenedor {
+  flex: 0 1 700px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-around;
+}
+
+.btnOpcion {
+  min-width: 100%;
+  flex: 1 1 400px;
+  height: min-content;
+  background-color: $colorBopciones;
+  font-family: $letrageneral;
+  position: static;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  padding: space(.5) space(.25);
+  color: $colorletra;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btnOpcion:hover {
+  cursor: pointer;
+  background: $colorBopcionesHover;
+  color: white;
+}
+
+.contenedor-imagen {
+  height: 60vh;
+  max-width: max-content;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+#numeroPregunta {
+  background: beige;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+#imagen {
+  height: 100%;
+}
+
+#encabezado {
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  font-size:25px;
+  padding: $altoEncabezadoPregunta;
+  width: 100%;
+  background: $colorencabezado;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+  font-family: $letrageneral;
+}
+
+#mensaje-texto {
+  font-family: $letrageneral;
+  font-size: 25px;
+}
+
+#mensaje-boton {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 150px;
+  height: auto;
+  position: relative;
+  font-size: 18px;
+  background: $colorBotones;
+  mix-blend-mode: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+#seccionPreguntas {
+  background: $colorSeccionPregunta;
+  animation-duration: 1s;
+  animation-name: entrar-derecha;
+}
+
+
+.aparecer {
+  animation-duration: 1s;
+  animation-name: aparecer;
+}
+
+#contenedor-pregunta{
+  flex-wrap: nowrap;
+  animation-duration: 1s;
+  animation-name: aparecer;
+}
+
+#seccionResultados{
+  background-color: $colorLogin;
+  animation-duration: 1s;
+  animation-name: entrar-abajo;
+}
+
+.resultadoBotones{
+  display: flex;
+  justify-content: center;
+  gap:0.5em;
+}
+
+#resultado-contenedor{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#resultado-contenedor-texto{
+font-family:$letrageneral;
+}
+
+#resultado-contenedor-texto{
+  background-color: beige;
+  border: 2px solid black;
+}
+
+//RESPONSIVE============================
+@media (max-width: 700px) {
+  body {
+    overflow-y:auto;
+  }
+  .tituloJuego{
+    font-size: 3em;
+  }
+  //........................
+  #seccionLogin {
+    .contenedor {
+      width: 100vw;
+      gap: 1.5em;
+    }
+
+
+    #ingrNombre {
+      font-size: 1em;
+    }
+  }
+  //........................
+  #seccionPreguntas{
+    .opciones {
+        width: 100%;
+        gap:5px;
+    }
+    #contenedor-pregunta{
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      min-height: max-content;
+    }
+    .contenedor-imagen {
+      width: 70vw;
+      height: auto;
+    }
+    #opciones-contenedor {
+      width: 100%;
+      gap: 0.4em;
+      .btnOpcion{
+        width: 100%;
+      }
+    }
+  }
+
+}
